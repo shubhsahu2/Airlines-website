@@ -1,0 +1,24 @@
+<h2 class="textStyle text-center">Welcome to Airlines</h2>
+<div class="row" *ngIf="airlinesArray?.length">
+    <div class="col-md-3 mt-3" *ngFor="let air of airlinesArray">
+        <div class="card card-shadow" style="opacity: 1.8;">
+            <img class="card-img-top airlinesImage" src="{{air.airlinesImage}}" alt="{{air.id}}" height="200px">
+            <div class="card-body text-center">
+                <h6 class="cardTitle">
+                    {{air.airlinesName}} | {{air.id}}
+                </h6>    
+                <div class="cardData">
+                    <h6 class="fare">
+                        Fare: {{air.fare | currency:"USD"}}
+                    </h6>
+                </div>
+                <button class="btn btn-outline-dark btn-sm" [disabled]="air.status=='Cancelled'" id="bookTicket" 
+                    (click)="showBookingForm(air.id)"
+                >Book Ticket</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="!airlinesArray?.length">
+    <h1 class="text text-center" id="errormessage">{{errormessage}}</h1>
+</div>

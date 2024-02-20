@@ -1,0 +1,63 @@
+{
+  "airlines": [
+    {
+      "id": "CAD-101",
+      "airlinesImage": "assets/imag1.jpg",
+      "airlinesName": "Candian Airlines",
+      "status": "Running",
+      "destination": "ottawa",
+      "fare": 543
+    },
+    {
+      "id": "AMT-102",
+      "airlinesImage": "assets/imag1.jpg",
+      "airlinesName": "American Airlines",
+      "status": "Running",
+      "destination": "NewYork",
+      "fare": 1000
+    },
+    {
+      "id": "JPN-103",
+      "airlinesImage": "assets/imag1.jpg",
+      "airlinesName": "Japan Airlines",
+      "status": "Cancelled",
+      "destination": "Tunig",
+      "fare": 800
+    },
+    {
+      "id": "IND-101",
+      "airlinesImage": "assets/imag1.jpg",
+      "airlinesName": "India Airlines",
+      "status": "Running",
+      "destination": "Mumbai",
+      "fare": 700
+    }
+  ],
+  "bookings": [
+    {
+      "id": "1001",
+      "airlinesId": "IND-101",
+      "customerName": "shubh sahu",
+      "date of jounrney": "2021-05-05",
+      "noOfTickets": 2
+    },
+    {
+      "id": "c01e",
+      "customerName": "shailysahu",
+      "noOfTickets": 1,
+      "dateofJourney": "2024-02-25"
+    },
+    {
+      "id": "625f",
+      "customerName": "sssssss",
+      "noOfTickets": 3,
+      "dateofJourney": "2024-02-24"
+    },
+    {
+      "id": "19c2",
+      "customerName": "shailysahu",
+      "noOfTickets": 3,
+      "dateofJourney": "2024-03-03"
+    }
+  ]
+}

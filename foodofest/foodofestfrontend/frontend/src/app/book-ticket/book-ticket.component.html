@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <div class="card shadow text-dark mt-2" >
+            <div class="card-header">
+                <h4 class="text text-center">Book with us !</h4>
+            </div>
+            <form [formGroup]="bookingForm" (ngSubmit)="bookTickets()">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="airlinesId">Airlines Id</label>
+                        <input type="text" id="airlinesId" formControlName="airlinesId" class="form-control"/>
+
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="custName">Customer Name</label>
+                        <input type="text" id="custName" formControlName="customerName" class="form-control"/>
+                        <div id="customerNameError" class="alert alert-danger" *ngIf="bookingForm.controls['customerName'].dirty && bookingForm.controls['customerName'].invalid">
+                            <span *ngIf="bookingForm.controls['customerName'].errors?.['required']">Field Required</span>
+                            <span *ngIf="bookingForm.controls['customerName'].errors?.['pattern']">Name can have only Alphabets</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="noOfTickets">Number of Tickets</label>
+                        <input type="number" id="noOfTickets" formControlName="noOfTickets" class="form-control"/>
+                        <div id="noOfTicketsError" class="alert alert-danger" *ngIf="bookingForm.controls['noOfTickets'].dirty && bookingForm.controls['noOfTickets'].invalid">
+                            <span *ngIf="bookingForm.controls['noOfTickets'].errors?.['min']">Atleast 1 Tickets should be booked</span>
+                            <span *ngIf="bookingForm.controls['noOfTickets'].errors?.['max']">Maximum 5 ticket can be booked</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dateofJourney">Date of Journey</label>
+                        <input type="date" id="dateofJourney" formControlName="dateofJourney" class="form-control"/>
+                        <div id="dateofJourneyError" class="alert alert-danger" *ngIf="bookingForm.controls['dateofJourney'].dirty && bookingForm.controls['dateofJourney'].invalid">
+                            <span *ngIf="bookingForm.controls['dateofJourney'].errors?.['required']">Field Required</span>
+                            <span *ngIf="bookingForm.controls['dateofJourney'].errors?.['dateError']">Journey cant be past date</span>
+                        </div>
+                    </div>
+                    <div class="card-gooter text-center">
+                        <div class="form-group">
+                            <button class="btn btn-outline-success btn-sm btn-block mr-4" [disabled]="bookingForm.invalid" id="confirmBooking" type="submit">Confirm Booking</button>
+
+                        </div>
+                        <button routerLink="/airline" class="btn btn-link" id="checkOutFlights">check out Flights</button>
+                        <div *ngIf="['errormessage']" class="text text-danger" id="errormessage">{{errormessage}}</div>
+                        <div *ngIf="['successmessage']" class="text text-success" id="successmessage">{{successmesage}}</div>
+                    </div>
+                    
+
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

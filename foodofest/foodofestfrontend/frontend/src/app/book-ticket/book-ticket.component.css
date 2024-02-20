@@ -1,0 +1,36 @@
+/* Style for the card header */
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Style for the form inputs */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the error messages */
+  .alert {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+  /* Style for the confirm booking button */
+  #confirmBooking {
+    margin-top: 20px;
+  }
+  
+  /* Style for the check out flights link */
+  #checkOutFlights {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Style for success and error messages */
+  #errormessage, #successmessage {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
